@@ -1,19 +1,19 @@
 export default{
     "products": [
         {
-            "id": "1",
+            "sku": "item001",
             "name": "Clock",
             "price": 40.00
         },
         {
-            "id": "2",
+            "sku": "item002",
             "name": "Scorch Dress",
             "price": 59.99
         },
         {
-            "id": "3",
+            "sku": "item003",
             "name": "Sony Earbuds",
             "price": 29.99
-        }
+        }   
     ]
 }
