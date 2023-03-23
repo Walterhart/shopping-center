@@ -1,3 +1,5 @@
+import { useMemo, useReducer } from "react"
+
 export type CartItemType ={
     sku: string,
     name: string,
@@ -88,4 +90,12 @@ CartStateType =>{
         default:
             throw new Error("Error has occured in reducer action type");
     }
+}
+
+const useCartContext = (initCartState: CartStateType) =>{
+    const [state, dispatch] = useReducer(reducer, initCartState)
+
+    const REDUCER_ACTIONS = useMemo(() =>{
+        return REDUCER_ACTION_TYPE
+    }, [])
 }
