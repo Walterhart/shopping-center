@@ -1,8 +1,19 @@
-import React from 'react'
+import Navbar from "./Navbar"
 
-function Header () {
+type Props = {
+    viewCart: boolean,
+    setViewCart: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+function Header ({viewCart, setViewCart} : Props) {
+  
   return (
-    <div>Header </div>
+    <header className="header">
+            <h1> Wally - Taberna</h1>
+            <p>Total items:</p>
+            <p>Total price:</p>
+            <Navbar viewCart = { viewCart} setViewCart = {setViewCart}/>
+        </header>
   )
 }
 

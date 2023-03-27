@@ -1,9 +1,9 @@
 import './App.css'
 import { useState } from 'react'
 import Footer from './components/Footer';
-import Header from './components/header';
+import Header from './components/Header';
 import Cart from './components/Cart';
-import ItemList from './components/itemList';
+import ItemList from './components/ItemList';
 
 function App() {
   const [viewCart, setViewCart] = useState<boolean>(false)
@@ -13,8 +13,8 @@ function App() {
   //const pageContent = viewCart ? <Cart/> : <ProductList/>
   return (
     <div className="app">
-      <Header/>
-      {content}
+      <Header viewCart = {viewCart} setViewCart = {setViewCart}/>
+        {content}
       <Footer/>
     </div>
   )
