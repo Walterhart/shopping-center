@@ -10,7 +10,7 @@ function Footer({viewCart}: Props) {
   const year: number = new Date().getFullYear()
 
   const content = viewCart
-  ?<p>Shopping Cart &copy; {year}</p>
+  ?<p>Wally - Taberna &copy; {year}</p>
   :(
     <>
         <p>Total items: {totalItems}</p>
@@ -21,7 +21,9 @@ function Footer({viewCart}: Props) {
   return (
     <div>
         <footer>
+            <div className="footer">
             {content}
+            </div>
         </footer>    
     </div>
   )

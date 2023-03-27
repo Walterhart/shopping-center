@@ -1,4 +1,3 @@
-import './App.css'
 import { useState } from 'react'
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -15,7 +14,7 @@ function App() {
     <div className="app">
       <Header viewCart = {viewCart} setViewCart = {setViewCart}/>
         {content}
-      <Footer/>
+      <Footer viewCart = {viewCart}/>
     </div>
   )
 }
