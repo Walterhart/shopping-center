@@ -8,7 +8,6 @@ type Props = {
 
 function Header ({viewCart, setViewCart} : Props) {
 
-  // 
   const { totalItems, totalPrice} = useCart()
   return (
     <header className="header">

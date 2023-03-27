@@ -1,8 +1,29 @@
-import React from 'react'
+import useCart from '../hooks/useCart'
 
-function Footer() {
+type Props ={
+    viewCart:boolean
+}
+function Footer({viewCart}: Props) {
+  const { totalItems, totalPrice} = useCart()
+
+  // define year
+  const year: number = new Date().getFullYear()
+
+  const content = viewCart
+  ?<p>Shopping Cart &copy; {year}</p>
+  :(
+    <>
+        <p>Total items: {totalItems}</p>
+        <p>Total price: {totalPrice} </p>
+        <p>Shopping Cart: {totalItems}</p>
+    </>
+  )
   return (
-    <div>Footer</div>
+    <div>
+        <footer>
+            {content}
+        </footer>    
+    </div>
   )
 }
 
