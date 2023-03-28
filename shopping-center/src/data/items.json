@@ -1,5 +1,5 @@
-export default{
-    "products": [
+{
+    "items" : [
         {
             "sku": "item001",
             "name": "Clock",
