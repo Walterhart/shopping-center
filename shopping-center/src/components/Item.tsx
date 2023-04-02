@@ -4,7 +4,7 @@ import {
   ReducerAction,
 } from "../context/modules/CartProvider";
 import { ReactElement } from "react";
-import { BsCartPlus } from "react-icons/bs";
+import { BsCartPlus, BsCheckCircle } from "react-icons/bs";
 
 type Props = {
   item: ItemType;
@@ -30,24 +30,33 @@ const Item = ({
     dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...item, quantity: 1 } });
 
   // in cart
-  const itemCart = isSelected ? `In cart` : null;
+  const itemCart = isSelected ? <BsCheckCircle /> : null;
   return (
-    <article className="item">
-      <h3> {item.name}</h3>
-      <img src={imgPath} alt={item.name} />
-
-      {/* format price */}
-      <p>
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(item.price)}
-        {itemCart}
-      </p>
-      <button onClick={onAddCart}>
-        <BsCartPlus />
-      </button>
-    </article>
+    <div className=" text-secondary">
+      <div className="container-lg">
+        <div className="row my-5 align-items-center justify-content-center">
+          <div className="col-8 col-lg-4 col-xl-3">
+            <div className="card text-center">
+              <img className="card-img-top" src={imgPath} alt={item.name} />
+              <div className="card-body">
+                <p className="card-title">{item.name} </p>
+                {/* format price */}
+                <p>
+                  {new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                  }).format(item.price)}
+                  <span>{itemCart}</span>
+                </p>
+                <button onClick={onAddCart}>
+                  <BsCartPlus />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
