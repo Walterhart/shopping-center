@@ -1,6 +1,7 @@
 import useCart from "../hooks/useCart";
 import { useState } from "react";
 import CartCheckout from "./CartCheckout";
+import { BsCartCheck } from "react-icons/bs";
 
 function Cart() {
   const [confirm, setConfirm] = useState<boolean>(false);
@@ -31,8 +32,7 @@ function Cart() {
         <p> Total Items: {totalItems}</p>
         <p>Total Price: {totalPrice}</p>
         <button className="cart--btn" disabled={!totalItems} onClick={onSubmit}>
-          {" "}
-          Place order{" "}
+          <BsCartCheck />
         </button>
       </div>
     </>
