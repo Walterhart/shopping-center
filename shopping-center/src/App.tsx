@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import ItemList from "./components/ItemList";
+import "./styles/style.scss";
 
 function App() {
   const [viewCart, setViewCart] = useState<boolean>(false);

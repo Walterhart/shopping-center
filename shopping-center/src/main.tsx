@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/index.css";
-//import "bootstrap/scss/bootstrap.scss";
-//import "./styles/style.scss";
+
 import { CartProvider } from "./context/modules/CartProvider";
 
 import { ItemProvider } from "./context/modules/ItemProvider";
