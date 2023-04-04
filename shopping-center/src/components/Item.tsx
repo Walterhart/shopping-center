@@ -5,6 +5,7 @@ import {
 } from "../context/modules/CartProvider";
 import { ReactElement } from "react";
 import { BsCartPlus, BsCheckCircle } from "react-icons/bs";
+import StarRating from "./StarRating";
 
 type Props = {
   item: ItemType;
@@ -41,6 +42,9 @@ const Item = ({
               <div className="card-body">
                 <p className="card-title">{item.name} </p>
                 {/* format price */}
+                <p className="card-text">
+                  <StarRating rating={item.rating} />
+                </p>
                 <p>
                   {new Intl.NumberFormat("en-US", {
                     style: "currency",

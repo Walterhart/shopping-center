@@ -3,6 +3,7 @@ import { createContext, ReactElement, useState, useEffect } from "react";
 export type ItemType = {
   sku: string;
   name: string;
+  rating: number;
   price: number;
 };
 
