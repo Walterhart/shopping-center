@@ -1,10 +1,12 @@
 import { BsFillCartFill } from "react-icons/bs";
+import useCart from "../hooks/useCart";
 type Props = {
   viewCart: boolean;
   setViewCart: React.Dispatch<React.SetStateAction<boolean>>;
 };
 // navbar
 function Navbar({ viewCart, setViewCart }: Props) {
+  const { totalItems } = useCart();
   // button logic
   // view cart or items base on click
   const btn = viewCart ? (
@@ -21,7 +23,7 @@ function Navbar({ viewCart, setViewCart }: Props) {
     >
       <BsFillCartFill />
       <div className="position-absolute top-100 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2">
-        3
+        {totalItems}
       </div>
     </button>
   );
