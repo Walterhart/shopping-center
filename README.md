@@ -2,7 +2,7 @@
 
 ## About
 
-This project demostrate a online shipping center. User can add an item into cart. In checkout user can change quantity of items, remove items and checkout. Planning on adding a database when I have spare time.
+This project demostrate a online shipping center using Vite and Typescript. User can add an item into cart. In checkout user can change quantity of items, remove items and checkout. Planning on adding a database when I have spare time.
 
 ## Notable packages
 
