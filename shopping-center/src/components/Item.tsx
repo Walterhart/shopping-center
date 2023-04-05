@@ -39,7 +39,7 @@ const Item = ({
           <div className="col-8 col-lg-4 col-xl-3">
             <div className="card text-center">
               <img
-                className="card-img-top img-fluid. "
+                className="card-img-top img-fluid"
                 src={imgPath}
                 alt={item.name}
               />
@@ -59,7 +59,7 @@ const Item = ({
                 </p>
 
                 <button
-                  className="btn rounded-pill btn-secondary "
+                  className="btn rounded-circle btn-secondary "
                   onClick={onAddCart}
                 >
                   <BsCartPlus />

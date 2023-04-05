@@ -53,40 +53,59 @@ const CartCheckout = ({ item, dispatch, REDUCER_ACTIONS }: Props) => {
     });
 
   return (
-    <li className="cart--item">
-      <img src={imgPath} alt={item.name} />
-      <div aria-label="Item Name"> {item.name}</div>
-      <div aria-label="Price per Item">
-        {" "}
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(item.price)}
+    <div className=" text-secondary">
+      <div className="container-lg">
+        <div className="row my-5 align-items-center justify-content-center">
+          <div className="col-8 col-lg-4 col-xl-3">
+            <div className="card text-center">
+              <img
+                className="card-img-top img-fluid"
+                src={imgPath}
+                alt={item.name}
+              />
+              <div className="card-body ">
+                <div className="card-title" aria-label="Item Name">
+                  {item.name}
+                </div>
+                <div aria-label="Price per Item">
+                  {new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                  }).format(item.price)}
+                </div>
+                <label className="pe-1">Item Quantity:</label>
+                <select
+                  name="itemQuantity"
+                  id="itemQuantity"
+                  className="form-select bg-secondary text-light  "
+                  value={item.quantity}
+                  onChange={onChange}
+                >
+                  {options}
+                </select>
+                <p>
+                  Subtotal:
+                  <span className="m-1">
+                    {new Intl.NumberFormat("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    }).format(subtotal)}
+                  </span>
+                </p>
+
+                <button
+                  className="btn rounded-circle btn-secondary "
+                  title="Remove Item From Cart"
+                  onClick={onRemove}
+                >
+                  <BsCartDash />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <label>Item Quantity</label>
-      <select
-        name="itemQuantity"
-        id="itemQuantity"
-        className="cart--select"
-        value={item.quantity}
-        onChange={onChange}
-      >
-        {options}
-      </select>
-      <div className="cart--subtotal">
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(subtotal)}
-      </div>
-      <button
-        className="btn rounded-pill btn-secondary"
-        title="Remove Item From Cart"
-        onClick={onRemove}
-      >
-        <BsCartDash />
-      </button>
-    </li>
+    </div>
   );
 };
 

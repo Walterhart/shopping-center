@@ -12,7 +12,7 @@ function App() {
 
   //const pageContent = viewCart ? <Cart/> : <ProductList/>
   return (
-    <div className="app">
+    <div className="text-secondary">
       <Header viewCart={viewCart} setViewCart={setViewCart} />
       {content}
       <Footer viewCart={viewCart} />
