@@ -38,11 +38,18 @@ const Item = ({
         <div className="row my-5 align-items-center justify-content-center">
           <div className="col-8 col-lg-4 col-xl-3">
             <div className="card text-center">
-              <img className="card-img-top" src={imgPath} alt={item.name} />
-              <div className="card-body">
+              <img
+                className="card-img-top img-fluid. "
+                src={imgPath}
+                alt={item.name}
+              />
+              <div className="card-body ">
                 <p className="card-title">{item.name} </p>
                 {/* format price */}
-                <StarRating rating={item.rating} />
+                <StarRating
+                  rating={item.stats.rating}
+                  review={item.stats.reviews}
+                />
                 <p>
                   {new Intl.NumberFormat("en-US", {
                     style: "currency",

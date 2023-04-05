@@ -3,19 +3,28 @@
     {
       "sku": "item001",
       "name": "Clock",
-      "rating": 4,
+      "stats": {
+        "reviews": 11,
+        "rating": 4
+      },
       "price": 40.0
     },
     {
       "sku": "item002",
       "name": "Scorch Dress",
-      "rating": 4,
+      "stats": {
+        "reviews": 120,
+        "rating": 4
+      },
       "price": 59.99
     },
     {
       "sku": "item003",
       "name": "Sony Earbuds",
-      "rating": 5,
+      "stats": {
+        "reviews": 220,
+        "rating": 4
+      },
       "price": 29.99
     }
   ]
