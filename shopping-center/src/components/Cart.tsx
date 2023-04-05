@@ -31,7 +31,11 @@ function Cart() {
       <div className="cart--items">
         <p> Total Items: {totalItems}</p>
         <p>Total Price: {totalPrice}</p>
-        <button className="cart--btn" disabled={!totalItems} onClick={onSubmit}>
+        <button
+          className="btn rounded-pill btn-secondary"
+          disabled={!totalItems}
+          onClick={onSubmit}
+        >
           <BsCartCheck />
         </button>
       </div>

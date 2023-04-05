@@ -80,7 +80,7 @@ const CartCheckout = ({ item, dispatch, REDUCER_ACTIONS }: Props) => {
         }).format(subtotal)}
       </div>
       <button
-        className="cart--button"
+        className="btn rounded-pill btn-secondary"
         title="Remove Item From Cart"
         onClick={onRemove}
       >

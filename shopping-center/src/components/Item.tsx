@@ -59,7 +59,7 @@ const Item = ({
                 </p>
 
                 <button
-                  className="btn rounded-pill btn-secondary"
+                  className="btn rounded-pill btn-secondary "
                   onClick={onAddCart}
                 >
                   <BsCartPlus />
