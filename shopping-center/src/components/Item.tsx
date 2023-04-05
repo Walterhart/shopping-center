@@ -42,9 +42,7 @@ const Item = ({
               <div className="card-body">
                 <p className="card-title">{item.name} </p>
                 {/* format price */}
-                <p className="card-text">
-                  <StarRating rating={item.rating} />
-                </p>
+                <StarRating rating={item.rating} />
                 <p>
                   {new Intl.NumberFormat("en-US", {
                     style: "currency",
@@ -52,7 +50,11 @@ const Item = ({
                   }).format(item.price)}
                   <span>{itemCart}</span>
                 </p>
-                <button onClick={onAddCart}>
+
+                <button
+                  className="btn rounded-pill btn-secondary"
+                  onClick={onAddCart}
+                >
                   <BsCartPlus />
                 </button>
               </div>

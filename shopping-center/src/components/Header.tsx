@@ -11,7 +11,7 @@ function Header({ viewCart, setViewCart }: Props) {
   return (
     <header className="header">
       <div className="header--title">
-        <h1 className="text-primary"> Wally - Taberna</h1>
+        <h1> Wally - Taberna</h1>
       </div>
       <div className="items--detail">
         <p>Total items: {totalItems}</p>
